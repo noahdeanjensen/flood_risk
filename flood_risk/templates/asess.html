@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flood Risk Assessment</title>
+    <style>
+        .form-section { margin-bottom: 2rem; }
+        .result-section { 
+            margin-top: 2rem;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <h1>Flood Risk Assessment</h1>
+    
+    <div class="form-section">
+        <form method="post">
+            {% csrf_token %}
+            <p>Location: <input type="text" name="location" required></p>
+            <p>Pipe Diameter: <input type="number" step="0.1" name="pipe_diameter" required></p>
+            <p>Damage Level (1-10): 
+                <input type="number" min="1" max="10" name="damage_level" required>
+            </p>
+            <button type="submit">Assess Risk</button>
+        </form>
+    </div>
+
+    {% if assessment %}
+    <div class="result-section">
+        <h2>Assessment Result</h2>
+        <p>Location: {{ assessment.location }}</p>
+        <p>Pipe Diameter: {{ assessment.pipe_diameter }}"</p>
+        <p>Damage Level: {{ assessment.damage_level }}/10</p>
+        <h3>Risk Score: {{ assessment.risk_score|floatformat:1 }}%</h3>
+        
+        <button onclick="location.reload()">New Assessment</button>
+    </div>
+    {% endif %}
+</body>
+</html>
