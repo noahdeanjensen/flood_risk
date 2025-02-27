@@ -24,12 +24,14 @@ def check_auth():
         if st.button("Login"):
             try:
                 db = get_db()
-                user = db.users.find_one({"username": username})
+                c = db.cursor()
+                c.execute("SELECT * FROM users WHERE username = ?", (username,))
+                user = c.fetchone()
 
                 if user and bcrypt.checkpw(password.encode('utf-8'), user['password']):
                     st.session_state.authenticated = True
-                    st.session_state.is_admin = user.get('is_admin', False)
-                    st.session_state.user_id = str(user['_id'])
+                    st.session_state.is_admin = bool(user['is_admin'])
+                    st.session_state.user_id = user['id']
                     st.experimental_rerun()
                 else:
                     st.error("Invalid credentials")
@@ -49,18 +51,21 @@ def create_user(username, password, is_admin=False):
     """Create a new user"""
     try:
         db = get_db()
-        if db.users.find_one({"username": username}):
+        c = db.cursor()
+
+        # Check if username exists
+        c.execute("SELECT id FROM users WHERE username = ?", (username,))
+        if c.fetchone():
             raise ValueError("Username already exists")
 
+        # Create new user with bcrypt hashed password
         hashed = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
-        user = {
-            "username": username,
-            "password": hashed,
-            "is_admin": is_admin
-        }
-
-        result = db.users.insert_one(user)
-        return str(result.inserted_id)
+        c.execute(
+            "INSERT INTO users (username, password, is_admin) VALUES (?, ?, ?)",
+            (username, hashed, is_admin)
+        )
+        db.commit()
+        return c.lastrowid
     except Exception as e:
         st.error(f"Failed to create user: {str(e)}")
         raise e
