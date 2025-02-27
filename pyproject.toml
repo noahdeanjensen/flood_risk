@@ -5,6 +5,7 @@ description = "Add your description here"
 requires-python = ">=3.11"
 dependencies = [
     "bcrypt>=4.2.1",
+    "certifi>=2025.1.31",
     "pandas>=2.2.3",
     "plotly>=6.0.0",
     "pymongo>=4.11.1",

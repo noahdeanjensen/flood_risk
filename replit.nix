@@ -1,5 +1,6 @@
 {pkgs}: {
   deps = [
+    pkgs.cacert
     pkgs.freetype
     pkgs.rustc
     pkgs.libiconv

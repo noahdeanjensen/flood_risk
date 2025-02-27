@@ -643,6 +643,7 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "bcrypt" },
+    { name = "certifi" },
     { name = "pandas" },
     { name = "plotly" },
     { name = "pymongo" },
@@ -653,6 +654,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "bcrypt", specifier = ">=4.2.1" },
+    { name = "certifi", specifier = ">=2025.1.31" },
     { name = "pandas", specifier = ">=2.2.3" },
     { name = "plotly", specifier = ">=6.0.0" },
     { name = "pymongo", specifier = ">=4.11.1" },
