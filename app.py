@@ -46,7 +46,7 @@ def main():
         st.session_state.authenticated = False
         st.session_state.is_admin = False
         st.session_state.user_id = None
-        st.experimental_rerun()
+        st.rerun()
 
 if __name__ == "__main__":
     main()

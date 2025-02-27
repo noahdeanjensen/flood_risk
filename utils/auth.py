@@ -32,7 +32,7 @@ def check_auth():
                     st.session_state.authenticated = True
                     st.session_state.is_admin = bool(user['is_admin'])
                     st.session_state.user_id = user['id']
-                    st.experimental_rerun()
+                    st.rerun()  # Updated from experimental_rerun
                 else:
                     st.error("Invalid credentials")
             except Exception as e:
