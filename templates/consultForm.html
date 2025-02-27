@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stormwater Asset Management</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <h1>Stormwater Asset Management</h1>
+    </header>
+
+    <!-- Module Selection -->
+    <div class="tabs">
+      <button class="tab" onclick="showModule('module1')">Module 1</button>
+      <button class="tab" onclick="showModule('module2')">Module 2</button>
+      <button class="tab" onclick="showModule('module3')">Module 3</button>
+      <button class="tab" onclick="showModule('module4')">Module 4</button>
+      <button class="tab" onclick="showModule('module5')">Module 5</button>
+    </div>
+
+    <!-- Module Content -->
+    <div id="module1" class="module-content active">
+      <h2>Stormwater
+        Hydraulic
+        Asset
+        Condition
+        (SHAC)</h2>
+
+      <div>
+        <label for="pipe-diameter">Pipe Diameter/Width (inches):</label>
+        <input type="number" id="pipe-diameter" min="1" placeholder="Enter diameter in inches">
+      </div>
+
+      <!-- Feature Selection -->
+      <h3>Stormwater
+        Treatment
+        Asset
+        Condition
+        (STAC)</h3>
+      <label for="condition-select">Choose a Condition:</label>
+      <select id="condition-select">
+        <optgroup label="Damage Level">
+          <option value="damage-pipes">Pipes</option>
+          <option value="damage-Culverts"> Culverts</option>
+          <option value="damage-RCBs">RCBs</option>
+          <option value="damage-Drainage Inlets">Drainage Inlets</option>
+          <option value="damage-Trench Drains">Trench Drains</option>
+          <option value="damage-manholes">Manholes</option>
+          <option value="damage-Junction Boxes">Junction Boxes</option>
+          <option value="damage-ditches">Ditches</option>
+          <option value="damage-Channels">Channels</option>
+          <option value="damage-Swales">Swales</option>
+          <option value="damage-Energy Dissipators">Energy Dissipators</option>
+        </optgroup>
+        <optgroup label="Stormwater Asset Structural Condition (SASC)">
+          <option value="failure-probability">Probability of Failure</option>
+          <option value="safety-factor">Safety Factor in Allowable Stress Design</option>
+          <option value="reserve-strength">Reserve Strength Factor</option>
+          <option value="robustness">Robustness</option>
+          <option value="resilience">Resilience</option>
+        </optgroup>
+        <optgroup label="Overall Stormwater Asset Condition (OSAC)">
+          <option value="osac-rating">Overall Condition Rating</option>
+        </optgroup>
+      </select>
+
+      <button id="add-condition">Add Condition</button>
+
+      <!-- Dynamic Condition Ratings -->
+      <h3>Rated Condition Features</h3>
+      <div id="conditions-container"></div>
+
+      <!-- Optimization & Cost Analysis -->
+      <h3>Optimization & Cost Analysis</h3>
+      <label for="cost-slider">Preservation vs Replacement:</label>
+      <input type="range" id="cost-slider" min="0" max="100" step="1" value="50">
+      <div id="cost-value">50%</div>
+      <!-- Optional Comments -->
+      <h3>Additional Comments (Optional)</h3>
+      <textarea id="stac-comments" rows="4" placeholder="Enter any observations or additional notes..."></textarea>
+    </div>
+
+
+    <div id="module2" class="module-content">
+      <h2>Stormwater Asset Structural Condition (SASC)</h2>
+    
+      <h3>Instantaneous Probability of Failure (Pf)</h3>
+      <label for="resistance-input">Resistance (R):</label>
+      <input type="number" id="resistance-input" placeholder="Enter resistance value" step="any">
+      
+      <label for="load-input">Load (Q):</label>
+      <input type="number" id="load-input" placeholder="Enter load value" step="any">
+      
+      <h4>Instantaneous Probability of Failure (Pf):</h4>
+      <div id="pf-value">Not Calculated</div>
+    
+      <h3>Safety Factor (SF)</h3>
+      <label for="sigma-u-input">Maximum Usable Stress (σu):</label>
+      <input type="number" id="sigma-u-input" placeholder="Enter maximum usable stress" step="any">
+      
+      <label for="sigma-all-input">Allowable Stress (σall):</label>
+      <input type="number" id="sigma-all-input" placeholder="Enter allowable stress" step="any">
+      
+      <h4>Safety Factor (SF):</h4>
+      <div id="sf-value">Not Calculated</div>
+    
+      <h3>Reserve Strength Factor (R1)</h3>
+      <label for="load-carrying-capacity">Load Carrying Capacity (Rc):</label>
+      <input type="number" id="load-carrying-capacity" placeholder="Enter load carrying capacity" step="any">
+      
+      <label for="applied-load">Applied Load (Q1):</label>
+      <input type="number" id="applied-load" placeholder="Enter applied load" step="any">
+      
+      <h4>Reserve Strength Factor (R1):</h4>
+      <div id="r1-value">Not Calculated</div>
+    
+      <h3>Robustness (RO)</h3>
+      <label for="robustness-input">Robustness Rating (0 - 1):</label>
+      <input type="number" id="robustness-input" placeholder="Enter robustness rating" min="0" max="1" step="any">
+      
+      <h4>Robustness (RO):</h4>
+      <div id="ro-value">Not Calculated</div>
+    
+      <h3>Resilience (RE)</h3>
+      <label for="resilience-input">Resilience Rating (0 - 1):</label>
+      <input type="number" id="resilience-input" placeholder="Enter resilience rating" min="0" max="1" step="any">
+      
+      <h4>Resilience (RE):</h4>
+      <div id="re-value">Not Calculated</div>
+
+      <div id="osac-slider-container">
+        <h3>Overall Stormwater Asset Condition (OSAC)</h3>
+        <label for="osac-slider">Condition Asset State (CAS):</label>
+        <input type="range" id="osac-slider" min="1" max="10" step="1" value="5">
+        <div id="osac-value">5</div>
+      </div>
+    
+    </div>
+
+
+    <div id="module3" class="module-content">
+      <h2>Hydraulic Performance (HP)</h2>
+    
+      <!-- Feature Selection -->
+      <h3>Select Feature to Rate</h3>
+      <label for="feature-select">Choose a Feature:</label>
+      <select id="feature-select">
+        <optgroup label="Flow Attenuation at the Outlet (Cherqui, 2013)">
+          <option value="flow_attenuation">Flow attenuation at the outlet (MAM)</option>
+        </optgroup>
+        <optgroup label="Volume Reduction at the Outlet (Cherqui, 2013)">
+          <option value="volume_reduction">Volume Reduction at the Outlet</option>
+        </optgroup>
+        <optgroup label="Pumping Station Overflow">
+          <option value="pumping_overflow">Pumping Station Overflow</option>
+        </optgroup>
+        <optgroup label="Dry Weather Flow (DWF)">
+          <option value="dwf">Dry Weather Flow (DWF)</option>
+        </optgroup>
+        <optgroup label="Overflow Frequency">
+          <option value="overflow_freq">Overflow Frequency</option>
+        </optgroup>
+        <optgroup label="Drainage Duration Frequency">
+          <option value="drainage_duration">Drainage Duration Frequency</option>
+        </optgroup>
+      </select>
+    
+      <h3>Input Parameters</h3>
+      <div id="input-fields-container">
+        <!-- Dynamic input fields will be added here based on the selected feature -->
+      </div>
+    
+      <button id="save-feature" style="display:none;">Save Feature</button>
+    
+      <h3>Saved Features</h3>
+      <table id="saved-results">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Input Values</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+
+     <!-- Module Content -->
+     <div id="module4" class="module-content">
+      <h2>Hydrological Performance (DP)</h2>
+
+      <div class="container">
+          <label for="precipitation">Precipitation (mm):</label>
+          <input type="number" id="precipitation" placeholder="Enter Precipitation">
+
+          <label for="evapotranspiration">Evapotranspiration (mm):</label>
+          <input type="number" id="evapotranspiration" placeholder="Enter Evapotranspiration">
+
+          <label for="flowPipe1">Flow at Pipe 1 (m³/s):</label>
+          <input type="number" id="flowPipe1" placeholder="Enter Flow at Pipe 1">
+
+          <label for="flowPipe2">Flow at Pipe 2 (m³/s):</label>
+          <input type="number" id="flowPipe2" placeholder="Enter Flow at Pipe 2">
+
+          <label for="floodEvents">Number of Flood Events:</label>
+          <input type="number" id="floodEvents" placeholder="Enter Number of Flood Events">
+
+          <label for="totalTime">Total Time Period (days):</label>
+          <input type="number" id="totalTime" placeholder="Enter Total Time Period">
+
+          <label for="instantaneousFlow">Instantaneous Inflow (m³/s):</label>
+          <input type="number" id="instantaneousFlow" placeholder="Enter Inflow">
+
+          <button onclick="simulateHydrologicalPerformance()">Simulate</button>
+
+          <div class="result" id="resultmod4">
+              <!-- Results will be displayed here -->
+          </div>
+      </div>
+  </div>
+
+
+
+  <div id="module5" class="module-content">
+    <h2>Environmental and Social Condition (ESC) & Time Condition (TC)</h2>
+  
+    <div class="container">
+      <!-- Time Condition (TC) Form -->
+      <h3>Time Condition (TC) - Lifespan and Long-Term Effectiveness</h3>
+      <label for="vegetationEstablishment">Vegetation Establishment Efficiency:</label>
+      <input type="number" id="vegetationEstablishment" placeholder="Enter Vegetation Establishment Efficiency">
+  
+      <label for="startingEfficiency">Starting Efficiency:</label>
+      <input type="number" id="startingEfficiency" placeholder="Enter Starting Efficiency">
+  
+      <label for="stormEventEfficiency">Efficiency for Each Storm Event:</label>
+      <input type="number" id="stormEventEfficiency" placeholder="Enter Storm Event Efficiency">
+  
+      <label for="maintenanceEfficiency">Efficiency Between Maintenance:</label>
+      <input type="number" id="maintenanceEfficiency" placeholder="Enter Efficiency Between Maintenance">
+  
+      <label for="lifecycleEfficiency">Efficiency Over Life Cycle:</label>
+      <input type="number" id="lifecycleEfficiency" placeholder="Enter Efficiency Over Life Cycle">
+  
+      <label for="longTermEfficiency">Long-Term Efficiency:</label>
+      <input type="number" id="longTermEfficiency" placeholder="Enter Long-Term Efficiency for Each BMP">
+  
+      <label for="monitoringChecklists">Monitoring and Maintenance Checklist:</label>
+      <textarea id="monitoringChecklists" rows="4" placeholder="Enter Monitoring and Maintenance Procedures"></textarea>
+  
+      <!-- Environmental and Social Condition (ESC) -->
+      <h3>Environmental and Social Condition (ESC)</h3>
+      <!-- Pollutant Concentration Attenuation -->
+      <label for="totalRunoffVolume">Total Runoff Volume per Event (L):</label>
+      <input type="number" id="totalRunoffVolume" placeholder="Enter Total Runoff Volume">
+  
+      <label for="pollutantConcentration">Pollutant Concentration (mg/L):</label>
+      <input type="number" id="pollutantConcentration" placeholder="Enter Pollutant Concentration">
+  
+      <label for="flowRate">Flow Rate (L/s):</label>
+      <input type="number" id="flowRate" placeholder="Enter Flow Rate">
+  
+      <label for="samples">Number of Samples During Event:</label>
+      <input type="number" id="samples" placeholder="Enter Number of Samples">
+  
+      <!-- Event-Based Pollutant Removal -->
+      <label for="inletLoading">Inlet Loading (%):</label>
+      <input type="number" id="inletLoading" placeholder="Enter Inlet Loading">
+  
+      <label for="outletLoading">Outlet Loading (%):</label>
+      <input type="number" id="outletLoading" placeholder="Enter Outlet Loading">
+  
+      <!-- Pollution Retention Performance -->
+      <label for="rvr">Percent Annual Runoff Volume Retained (RVR):</label>
+      <input type="number" id="rvr" placeholder="Enter RVR">
+  
+      <label for="prret">Percent Annual Pollutant Removal Rate (PRret):</label>
+      <input type="number" id="prret" placeholder="Enter PRret">
+  
+      <label for="prover">Percent Annual Pollutant Removal Rate for Overflow (PRover):</label>
+      <input type="number" id="prover" placeholder="Enter PRover">
+  
+      <!-- Customer Satisfaction -->
+      <label for="satisfaction">Customer Satisfaction Level (1-10):</label>
+      <input type="number" id="satisfaction" placeholder="Enter Satisfaction Level" min="1" max="10">
+  
+      <!-- Accident Frequency and Severity -->
+      <label for="frequencyRate">Accident Frequency Rate:</label>
+      <input type="number" id="frequencyRate" placeholder="Enter Frequency Rate">
+  
+      <label for="severityRate">Injury Severity Rate:</label>
+      <input type="number" id="severityRate" placeholder="Enter Severity Rate">
+  
+      <label for="manHoursWorked">Total Man-Hours Worked:</label>
+      <input type="number" id="manHoursWorked" placeholder="Enter Man-Hours Worked">
+
+      <div class="result" id="resultmod5">
+        <!-- Results will be displayed here -->
+      </div>
+  
+      <button id="simulateButton">Simulate</button>
+  
+    </div>
+
+  </div>
+
+    <!-- Action Buttons -->
+    <div class="action-buttons">
+      <button onclick="generateReport()">Generate Report</button>
+      <button onclick="saveData()">Save</button>
+    </div>
+
+    <script src="{% static 'scripts.js' %}"></script>
+</body>
+
+</html>
