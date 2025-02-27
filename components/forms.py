@@ -1,4 +1,5 @@
 import streamlit as st
+from components.heat_map import create_risk_heat_map, calculate_risk_levels
 
 def condition_assessment_form():
     st.header("Stormwater Condition Assessment")
@@ -148,3 +149,51 @@ def environmental_social_form():
         }
 
     return es_metrics
+
+def infrastructure_location_form():
+    st.header("Infrastructure Location Data")
+
+    # Initialize infrastructure points in session state
+    if 'infrastructure_points' not in st.session_state:
+        st.session_state.infrastructure_points = []
+
+    with st.expander("Add Infrastructure Point"):
+        col1, col2 = st.columns(2)
+
+        with col1:
+            name = st.text_input("Location Name")
+            type_options = [
+                "pipes", "culverts", "drainageInlets", "manholes",
+                "channels", "outfalls", "bioRetentionBasins"
+            ]
+            point_type = st.selectbox("Infrastructure Type", type_options)
+            age = st.number_input("Age (years)", 0, 100, 0)
+
+        with col2:
+            latitude = st.number_input("Latitude", -90.0, 90.0, 40.7128)
+            longitude = st.number_input("Longitude", -180.0, 180.0, -74.0060)
+            last_maintenance = st.number_input("Days Since Last Maintenance", 0, 1000, 0)
+
+        if st.button("Add Point"):
+            point = {
+                'name': name,
+                'type': point_type,
+                'latitude': latitude,
+                'longitude': longitude,
+                'age': age,
+                'last_maintenance_days': last_maintenance
+            }
+            st.session_state.infrastructure_points.append(point)
+            st.success(f"Added {name} to infrastructure points")
+
+    # Display existing points
+    if st.session_state.infrastructure_points:
+        st.subheader("Infrastructure Points")
+        for i, point in enumerate(st.session_state.infrastructure_points):
+            st.text(f"{i+1}. {point['name']} ({point['type']})")
+
+        if st.button("Clear All Points"):
+            st.session_state.infrastructure_points = []
+            st.rerun()
+
+    return {'infrastructure_points': st.session_state.infrastructure_points}
