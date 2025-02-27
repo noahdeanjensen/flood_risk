@@ -38,9 +38,10 @@ def show():
         env_social_data = environmental_social_form()
 
     if st.button("Save Assessment"):
+        # Create assessment data with proper timestamp handling
         assessment_data = {
             "user_id": st.session_state.user_id,
-            "timestamp": datetime.utcnow(),
+            "timestamp": datetime.utcnow(),  # This will be serialized by our custom encoder
             "condition": condition_data,
             "functionality": functionality_data,
             "time_effectiveness": time_data,

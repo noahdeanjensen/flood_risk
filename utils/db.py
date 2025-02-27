@@ -12,6 +12,13 @@ def dict_factory(cursor, row):
         d[col[0]] = row[idx]
     return d
 
+class DateTimeEncoder(json.JSONEncoder):
+    """Custom JSON encoder for datetime objects"""
+    def default(self, obj):
+        if isinstance(obj, datetime):
+            return obj.isoformat()
+        return super().default(obj)
+
 @st.cache_resource
 def init_database():
     """Initialize SQLite database with required tables"""
@@ -60,12 +67,18 @@ def save_assessment(data):
         db = get_db()
         c = db.cursor()
 
+        # Ensure the timestamp is in the correct format
+        if isinstance(data['timestamp'], datetime):
+            timestamp = data['timestamp'].isoformat()
+        else:
+            timestamp = data['timestamp']
+
         c.execute(
             "INSERT INTO assessments (user_id, timestamp, data) VALUES (?, ?, ?)",
             (
                 int(data['user_id']),
-                datetime.utcnow().isoformat(),
-                json.dumps(data)
+                timestamp,
+                json.dumps(data, cls=DateTimeEncoder)  # Use custom encoder
             )
         )
         db.commit()
