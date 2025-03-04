@@ -3,7 +3,6 @@ from reportlab.lib.pagesizes import letter
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 import io
-from views.dashboard import calculate_overall_score
 
 def generate_report(assessment_data):
     buffer = io.BytesIO()
@@ -17,7 +16,7 @@ def generate_report(assessment_data):
     story.append(Spacer(1, 12))
 
     # Overall Score
-    overall_score = calculate_overall_score(assessment_data)
+    overall_score = 7 # TODO: Replace with actual overall score calculation
     score_text = f"Overall Infrastructure Score: {overall_score}/10"
     score_para = Paragraph(score_text, styles['Heading2'])
     story.append(score_para)

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        #log { border: 1px solid #ccc; padding: 10px; width: 80%; height: 300px; overflow-y: scroll; text-align: left; margin: auto; }
+        button { padding: 10px; margin: 10px; font-size: 16px; }
+    </style>
+</head>
+<body>
+
+    <h1>WebSocket Client Test</h1>
+    <button onclick="connectWebSocket()">Connect WebSocket</button>
+    <button onclick="disconnectWebSocket()">Disconnect WebSocket</button>
+    <p>Status: <span id="status">Disconnected</span></p>
+    <div id="log"></div>
+
+    <script>
+        let socket;
+
+        function connectWebSocket() {
+            if (socket && socket.readyState === WebSocket.OPEN) {
+                logMessage("Already connected.");
+                return;
+            }
+
+            socket = new WebSocket("ws://localhost:8472/ws");
+
+            socket.onopen = function(event) {
+                document.getElementById("status").innerText = "Connected";
+                logMessage("✅ WebSocket connected!");
+            };
+
+            socket.onmessage = function(event) {
+                logMessage("📩 New Data: " + event.data);
+            };
+
+            socket.onclose = function(event) {
+                document.getElementById("status").innerText = "Disconnected";
+                logMessage("❌ WebSocket closed.");
+            };
+
+            socket.onerror = function(error) {
+                logMessage("⚠️ Error: " + error.message);
+            };
+        }
+
+        function disconnectWebSocket() {
+            if (socket) {
+                socket.close();
+            }
+        }
+
+        function logMessage(message) {
+            let log = document.getElementById("log");
+            let entry = document.createElement("p");
+            entry.textContent = message;
+            log.appendChild(entry);
+            log.scrollTop = log.scrollHeight;
+        }
+    </script>
+
+</body>
+</html>
