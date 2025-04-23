@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="100%" height="100%" viewBox="0 0 500 900" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+  <!-- Gradients & patterns -->
+  <defs>
+    <!-- Main background gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#23395d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a2c50;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Lighter accent gradient -->
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b6080;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d4f77;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Water pattern -->
+    <pattern id="waterPattern" patternUnits="userSpaceOnUse" width="60" height="30" patternTransform="rotate(0)">
+      <path d="M0,15 Q15,0 30,15 Q45,30 60,15" fill="none" stroke="rgba(124,214,253,0.2)" stroke-width="3" />
+    </pattern>
+    
+    <!-- Raindrop pattern -->
+    <pattern id="rainPattern" patternUnits="userSpaceOnUse" width="100" height="100">
+      <circle cx="25" cy="25" r="2" fill="#7CD6FD" opacity="0.5" />
+      <circle cx="75" cy="40" r="2" fill="#7CD6FD" opacity="0.5" />
+      <circle cx="40" cy="70" r="2" fill="#7CD6FD" opacity="0.5" />
+      <circle cx="65" cy="85" r="2" fill="#7CD6FD" opacity="0.5" />
+    </pattern>
+    
+    <!-- Filter for glow effects -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bgGradient)" />
+  <rect width="100%" height="100%" fill="url(#waterPattern)" opacity="0.7" />
+  <rect width="100%" height="100%" fill="url(#rainPattern)" />
+
+  <!-- City silhouette -->
+  <path d="M0,750 
+           L20,750 L30,740 L40,750 L50,730 L60,750 L70,735 L90,750
+           L100,720 L120,750 L140,730 L150,750 L170,735 L180,750
+           L200,715 L220,750 L240,725 L260,750 L270,735 L280,750
+           L300,720 L320,750 L340,730 L350,750 L370,725 L380,750
+           L400,735 L420,750 L440,720 L460,750 L480,735 L500,750
+           L500,900 L0,900 Z" 
+        fill="#132238" opacity="0.8"/>
+
+  <!-- Abstract stormwater infrastructure elements -->
+  
+  <!-- Pipe system (bottom) -->
+  <path d="M50,800 L450,800" stroke="#555" stroke-width="30" stroke-linecap="round" opacity="0.7" />
+  <path d="M100,800 L100,750" stroke="#555" stroke-width="15" stroke-linecap="round" opacity="0.7" />
+  <path d="M200,800 L200,760" stroke="#555" stroke-width="15" stroke-linecap="round" opacity="0.7" />
+  <path d="M300,800 L300,755" stroke="#555" stroke-width="15" stroke-linecap="round" opacity="0.7" />
+  <path d="M400,800 L400,765" stroke="#555" stroke-width="15" stroke-linecap="round" opacity="0.7" />
+  
+  <!-- Circular elements -->
+  <circle cx="100" cy="730" r="20" fill="#444" opacity="0.8" />
+  <circle cx="200" cy="740" r="20" fill="#444" opacity="0.8" />
+  <circle cx="300" cy="735" r="20" fill="#444" opacity="0.8" />
+  <circle cx="400" cy="745" r="20" fill="#444" opacity="0.8" />
+
+  <!-- Detention pond or basin (middle) -->
+  <ellipse cx="250" cy="600" rx="150" ry="40" fill="url(#accentGradient)" opacity="0.6" />
+  <ellipse cx="250" cy="600" rx="130" ry="30" fill="#7CD6FD" opacity="0.3" />
+
+  <!-- Water flow lines -->
+  <path d="M100,730 Q175,650 250,600" fill="none" stroke="#7CD6FD" stroke-width="3" stroke-dasharray="5,5" opacity="0.6" />
+  <path d="M200,740 Q225,670 250,600" fill="none" stroke="#7CD6FD" stroke-width="3" stroke-dasharray="5,5" opacity="0.6" />
+  <path d="M300,735 Q275,665 250,600" fill="none" stroke="#7CD6FD" stroke-width="3" stroke-dasharray="5,5" opacity="0.6" />
+  <path d="M400,745 Q325,665 250,600" fill="none" stroke="#7CD6FD" stroke-width="3" stroke-dasharray="5,5" opacity="0.6" />
+
+  <!-- Raindrops (animated) -->
+  <g>
+    <path d="M120,220 Q130,250 120,270 Q110,250 120,220" fill="#7CD6FD" opacity="0.9">
+      <animate attributeName="d" values="M120,220 Q130,250 120,270 Q110,250 120,220; M120,200 Q130,230 120,250 Q110,230 120,200; M120,220 Q130,250 120,270 Q110,250 120,220" dur="4s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.9;0.6;0.9" dur="4s" repeatCount="indefinite" />
+    </path>
+    
+    <path d="M220,180 Q230,210 220,230 Q210,210 220,180" fill="#7CD6FD" opacity="0.8">
+      <animate attributeName="d" values="M220,180 Q230,210 220,230 Q210,210 220,180; M220,160 Q230,190 220,210 Q210,190 220,160; M220,180 Q230,210 220,230 Q210,210 220,180" dur="5s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.8;0.5;0.8" dur="5s" repeatCount="indefinite" />
+    </path>
+    
+    <path d="M320,200 Q330,230 320,250 Q310,230 320,200" fill="#7CD6FD" opacity="0.7">
+      <animate attributeName="d" values="M320,200 Q330,230 320,250 Q310,230 320,200; M320,180 Q330,210 320,230 Q310,210 320,180; M320,200 Q330,230 320,250 Q310,230 320,200" dur="4.5s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.7;0.4;0.7" dur="4.5s" repeatCount="indefinite" />
+    </path>
+    
+    <path d="M390,230 Q400,260 390,280 Q380,260 390,230" fill="#7CD6FD" opacity="0.9">
+      <animate attributeName="d" values="M390,230 Q400,260 390,280 Q380,260 390,230; M390,210 Q400,240 390,260 Q380,240 390,210; M390,230 Q400,260 390,280 Q380,260 390,230" dur="3.5s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.9;0.6;0.9" dur="3.5s" repeatCount="indefinite" />
+    </path>
+  </g>
+
+  <!-- Cloud elements (top) -->
+  <path d="M80,100 Q120,50 160,100 Q200,70 240,100 Q270,80 300,100 Q330,60 360,100 L360,130 L80,130 Z" fill="#fff" opacity="0.15" />
+  <path d="M140,60 Q180,20 220,60 Q250,30 280,60 Q310,20 350,60 L350,80 L140,80 Z" fill="#fff" opacity="0.1" />
+
+  <!-- Title text -->
+  <text x="250" y="350" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle" filter="url(#glow)">
+    Stormwater Infrastructure
+  </text>
+  <text x="250" y="390" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle" filter="url(#glow)">
+    Assessment System
+  </text>
+</svg>

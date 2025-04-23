@@ -1,0 +1,179 @@
+2025-03-08 20:13:56,110 - INFO - Flask server starting...
+2025-03-08 20:13:56,115 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.31:5000
+2025-03-08 20:13:56,115 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 20:13:56,280 - INFO - 172.31.128.31 - - [08/Mar/2025 20:13:56] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-08 20:13:56,555 - INFO - 172.31.128.31 - - [08/Mar/2025 20:13:56] "[31m[1mGET /dashboard/overview HTTP/1.1[0m" 401 -
+2025-03-08 20:19:25,761 - INFO - Flask server starting...
+2025-03-08 20:19:25,765 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.31:5000
+2025-03-08 20:19:25,766 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 20:19:26,196 - INFO - 172.31.128.31 - - [08/Mar/2025 20:19:26] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-08 20:19:26,526 - INFO - 172.31.128.31 - - [08/Mar/2025 20:19:26] "[31m[1mGET /dashboard/overview HTTP/1.1[0m" 401 -
+2025-03-08 20:19:26,643 - INFO - 172.31.128.31 - - [08/Mar/2025 20:19:26] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-08 20:19:26,664 - INFO - 172.31.128.31 - - [08/Mar/2025 20:19:26] "[31m[1mGET /dashboard/overview HTTP/1.1[0m" 401 -
+2025-03-08 20:20:15,335 - INFO - Flask server starting...
+2025-03-08 20:20:15,340 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.31:5000
+2025-03-08 20:20:15,341 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 20:20:15,512 - INFO - 172.31.128.31 - - [08/Mar/2025 20:20:15] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-08 20:20:15,582 - INFO - Unauthorized access attempt: Missing Authorization Header
+2025-03-08 20:20:15,583 - INFO - 172.31.128.31 - - [08/Mar/2025 20:20:15] "[31m[1mGET /dashboard/overview HTTP/1.1[0m" 401 -
+2025-03-08 20:20:15,961 - INFO - 172.31.128.31 - - [08/Mar/2025 20:20:15] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-08 20:20:15,977 - INFO - Unauthorized access attempt: Missing Authorization Header
+2025-03-08 20:20:15,977 - INFO - 172.31.128.31 - - [08/Mar/2025 20:20:15] "[31m[1mGET /dashboard/overview HTTP/1.1[0m" 401 -
+2025-03-08 20:21:36,762 - INFO - Flask server starting...
+2025-03-08 20:21:36,767 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.31:5000
+2025-03-08 20:21:36,767 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 20:21:36,952 - INFO - 172.31.128.31 - - [08/Mar/2025 20:21:36] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-08 20:21:37,020 - INFO - Unauthorized access attempt to /dashboard/overview: Missing Authorization Header
+2025-03-08 20:21:37,021 - INFO - 172.31.128.31 - - [08/Mar/2025 20:21:37] "[31m[1mGET /dashboard/overview HTTP/1.1[0m" 401 -
+2025-03-08 20:21:38,531 - INFO - 172.31.128.31 - - [08/Mar/2025 20:21:38] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-08 20:21:38,537 - INFO - Unauthorized access attempt to /dashboard/overview: Missing Authorization Header
+2025-03-08 20:21:38,537 - INFO - 172.31.128.31 - - [08/Mar/2025 20:21:38] "[31m[1mGET /dashboard/overview HTTP/1.1[0m" 401 -
+2025-03-08 20:22:38,926 - ERROR - Health check failed: Textual SQL expression 'SELECT 1' should be explicitly declared as text('SELECT 1')
+2025-03-08 20:22:38,926 - INFO - 127.0.0.1 - - [08/Mar/2025 20:22:38] "[35m[1mGET /api/health HTTP/1.1[0m" 500 -
+2025-03-08 20:22:39,220 - INFO - 127.0.0.1 - - [08/Mar/2025 20:22:39] "POST /api/auth/login HTTP/1.1" 200 -
+2025-03-08 20:23:10,462 - ERROR - Health check failed: Textual SQL expression 'SELECT 1' should be explicitly declared as text('SELECT 1')
+2025-03-08 20:23:10,462 - INFO - 127.0.0.1 - - [08/Mar/2025 20:23:10] "[35m[1mGET /api/health HTTP/1.1[0m" 500 -
+2025-03-08 20:23:10,747 - INFO - 127.0.0.1 - - [08/Mar/2025 20:23:10] "POST /api/auth/login HTTP/1.1" 200 -
+2025-03-08 20:23:41,821 - ERROR - Health check failed: Textual SQL expression 'SELECT 1' should be explicitly declared as text('SELECT 1')
+2025-03-08 20:23:41,821 - INFO - 127.0.0.1 - - [08/Mar/2025 20:23:41] "[35m[1mGET /api/health HTTP/1.1[0m" 500 -
+2025-03-08 20:23:42,113 - INFO - 127.0.0.1 - - [08/Mar/2025 20:23:42] "POST /api/auth/login HTTP/1.1" 200 -
+2025-03-08 20:27:46,307 - INFO - Flask server starting...
+2025-03-08 20:27:46,312 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.31:5000
+2025-03-08 20:27:46,312 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 20:27:46,719 - INFO - 172.31.128.31 - - [08/Mar/2025 20:27:46] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-08 20:27:46,976 - INFO - Unauthorized access attempt to /dashboard/overview: Missing Authorization Header
+2025-03-08 20:27:46,976 - INFO - 172.31.128.31 - - [08/Mar/2025 20:27:46] "[31m[1mGET /dashboard/overview HTTP/1.1[0m" 401 -
+2025-03-08 21:06:18,044 - INFO - Flask server starting...
+2025-03-08 21:06:18,049 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.74:5000
+2025-03-08 21:06:18,049 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 21:07:07,309 - INFO - 172.31.128.74 - - [08/Mar/2025 21:07:07] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-08 21:07:07,563 - INFO - Unauthorized access attempt to /dashboard/overview: Missing Authorization Header
+2025-03-08 21:07:07,564 - INFO - 172.31.128.74 - - [08/Mar/2025 21:07:07] "[31m[1mGET /dashboard/overview HTTP/1.1[0m" 401 -
+2025-03-08 21:07:58,812 - INFO - Health check passed
+2025-03-08 21:07:58,812 - INFO - 127.0.0.1 - - [08/Mar/2025 21:07:58] "GET /api/health HTTP/1.1" 200 -
+2025-03-08 21:07:59,076 - INFO - Successful login for user: admin
+2025-03-08 21:07:59,076 - INFO - 127.0.0.1 - - [08/Mar/2025 21:07:59] "POST /api/auth/login HTTP/1.1" 200 -
+2025-03-08 21:09:26,681 - INFO - Flask server starting...
+2025-03-08 21:09:26,687 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.74:5000
+2025-03-08 21:09:26,687 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 21:09:27,073 - INFO - 172.31.128.74 - - [08/Mar/2025 21:09:27] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-08 21:09:27,263 - INFO - Unauthorized access attempt to /dashboard/overview: Missing Authorization Header
+2025-03-08 21:09:27,264 - INFO - 172.31.128.74 - - [08/Mar/2025 21:09:27] "[31m[1mGET /dashboard/overview HTTP/1.1[0m" 401 -
+2025-03-08 21:09:31,265 - INFO - 172.31.128.74 - - [08/Mar/2025 21:09:31] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-08 21:09:31,333 - INFO - Unauthorized access attempt to /dashboard/overview: Missing Authorization Header
+2025-03-08 21:09:31,334 - INFO - 172.31.128.74 - - [08/Mar/2025 21:09:31] "[31m[1mGET /dashboard/overview HTTP/1.1[0m" 401 -
+2025-03-08 21:09:31,661 - INFO - 172.31.128.74 - - [08/Mar/2025 21:09:31] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-08 21:09:31,668 - INFO - Unauthorized access attempt to /dashboard/overview: Missing Authorization Header
+2025-03-08 21:09:31,668 - INFO - 172.31.128.74 - - [08/Mar/2025 21:09:31] "[31m[1mGET /dashboard/overview HTTP/1.1[0m" 401 -
+2025-03-08 21:10:35,902 - INFO - Flask server starting...
+2025-03-08 21:10:35,921 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.74:5000
+2025-03-08 21:10:35,922 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 21:10:36,139 - INFO - 172.31.128.74 - - [08/Mar/2025 21:10:36] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-08 21:10:36,203 - INFO - 172.31.128.74 - - [08/Mar/2025 21:10:36] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-08 21:10:36,207 - INFO - Unauthorized access attempt to /dashboard/overview: Missing Authorization Header
+2025-03-08 21:10:36,208 - INFO - 172.31.128.74 - - [08/Mar/2025 21:10:36] "[31m[1mGET /dashboard/overview HTTP/1.1[0m" 401 -
+2025-03-08 21:10:36,273 - INFO - Unauthorized access attempt to /dashboard/overview: Missing Authorization Header
+2025-03-08 21:10:36,274 - INFO - 172.31.128.74 - - [08/Mar/2025 21:10:36] "[31m[1mGET /dashboard/overview HTTP/1.1[0m" 401 -
+2025-03-08 21:10:45,866 - INFO - Unauthorized access attempt to /dashboard/overview: Missing Authorization Header
+2025-03-08 21:10:45,866 - INFO - 172.31.128.74 - - [08/Mar/2025 21:10:45] "[31m[1mGET /dashboard/overview HTTP/1.1[0m" 401 -
+2025-03-08 21:10:45,881 - INFO - 172.31.128.74 - - [08/Mar/2025 21:10:45] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-08 21:10:45,890 - INFO - Unauthorized access attempt to /dashboard/overview: Missing Authorization Header
+2025-03-08 21:10:45,891 - INFO - 172.31.128.74 - - [08/Mar/2025 21:10:45] "[31m[1mGET /dashboard/overview HTTP/1.1[0m" 401 -
+2025-03-08 21:11:51,720 - INFO - Flask server starting...
+2025-03-08 21:11:51,726 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.74:5000
+2025-03-08 21:11:51,726 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 21:11:51,892 - INFO - 172.31.128.74 - - [08/Mar/2025 21:11:51] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-08 21:11:51,894 - INFO - 172.31.128.74 - - [08/Mar/2025 21:11:51] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-08 21:11:52,087 - INFO - Unauthorized access attempt to /dashboard/overview: Missing Authorization Header
+2025-03-08 21:11:52,087 - INFO - 172.31.128.74 - - [08/Mar/2025 21:11:52] "[31m[1mGET /dashboard/overview HTTP/1.1[0m" 401 -
+2025-03-08 21:11:52,093 - INFO - Unauthorized access attempt to /dashboard/overview: Missing Authorization Header
+2025-03-08 21:11:52,093 - INFO - 172.31.128.74 - - [08/Mar/2025 21:11:52] "[31m[1mGET /dashboard/overview HTTP/1.1[0m" 401 -
+2025-03-08 21:11:52,361 - INFO - Unauthorized access attempt to /dashboard/overview: Missing Authorization Header
+2025-03-08 21:11:52,362 - INFO - 172.31.128.74 - - [08/Mar/2025 21:11:52] "[31m[1mGET /dashboard/overview HTTP/1.1[0m" 401 -
+2025-03-08 21:11:52,364 - INFO - 172.31.128.74 - - [08/Mar/2025 21:11:52] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-08 21:11:52,371 - INFO - Unauthorized access attempt to /dashboard/overview: Missing Authorization Header
+2025-03-08 21:11:52,372 - INFO - 172.31.128.74 - - [08/Mar/2025 21:11:52] "[31m[1mGET /dashboard/overview HTTP/1.1[0m" 401 -
+2025-03-08 21:12:07,983 - INFO - Flask server starting...
+2025-03-08 21:12:07,987 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.74:5000
+2025-03-08 21:12:07,987 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 21:12:08,167 - INFO - 172.31.128.74 - - [08/Mar/2025 21:12:08] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-08 21:12:08,257 - INFO - 172.31.128.74 - - [08/Mar/2025 21:12:08] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-08 21:12:08,350 - INFO - Unauthorized access attempt to /dashboard/overview: Missing Authorization Header
+2025-03-08 21:12:08,350 - INFO - 172.31.128.74 - - [08/Mar/2025 21:12:08] "[31m[1mGET /dashboard/overview HTTP/1.1[0m" 401 -
+2025-03-08 21:12:08,356 - INFO - Unauthorized access attempt to /dashboard/overview: Missing Authorization Header
+2025-03-08 21:12:08,357 - INFO - 172.31.128.74 - - [08/Mar/2025 21:12:08] "[31m[1mGET /dashboard/overview HTTP/1.1[0m" 401 -
+2025-03-08 21:12:08,852 - INFO - 172.31.128.74 - - [08/Mar/2025 21:12:08] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-08 21:12:08,857 - INFO - Unauthorized access attempt to /dashboard/overview: Missing Authorization Header
+2025-03-08 21:12:08,857 - INFO - 172.31.128.74 - - [08/Mar/2025 21:12:08] "[31m[1mGET /dashboard/overview HTTP/1.1[0m" 401 -
+2025-03-08 21:12:08,874 - INFO - Unauthorized access attempt to /dashboard/overview: Missing Authorization Header
+2025-03-08 21:12:08,875 - INFO - 172.31.128.74 - - [08/Mar/2025 21:12:08] "[31m[1mGET /dashboard/overview HTTP/1.1[0m" 401 -
+2025-03-08 21:12:44,502 - INFO - Flask server starting...
+2025-03-08 21:12:44,506 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.74:5000
+2025-03-08 21:12:44,507 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 21:12:44,681 - INFO - 172.31.128.74 - - [08/Mar/2025 21:12:44] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-08 21:12:44,704 - INFO - 172.31.128.74 - - [08/Mar/2025 21:12:44] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-08 21:12:44,872 - INFO - Unauthorized access attempt to /dashboard/overview: Missing Authorization Header
+2025-03-08 21:12:44,872 - INFO - 172.31.128.74 - - [08/Mar/2025 21:12:44] "[31m[1mGET /dashboard/overview HTTP/1.1[0m" 401 -
+2025-03-08 21:12:44,895 - INFO - Unauthorized access attempt to /dashboard/overview: Missing Authorization Header
+2025-03-08 21:12:44,896 - INFO - 172.31.128.74 - - [08/Mar/2025 21:12:44] "[31m[1mGET /dashboard/overview HTTP/1.1[0m" 401 -
+2025-03-08 21:12:45,023 - INFO - 172.31.128.74 - - [08/Mar/2025 21:12:45] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-08 21:12:45,052 - INFO - 172.31.128.74 - - [08/Mar/2025 21:12:45] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-08 21:12:45,057 - INFO - Unauthorized access attempt to /dashboard/overview: Missing Authorization Header
+2025-03-08 21:12:45,058 - INFO - 172.31.128.74 - - [08/Mar/2025 21:12:45] "[31m[1mGET /dashboard/overview HTTP/1.1[0m" 401 -
+2025-03-08 21:12:45,087 - INFO - Unauthorized access attempt to /dashboard/overview: Missing Authorization Header
+2025-03-08 21:12:45,087 - INFO - 172.31.128.74 - - [08/Mar/2025 21:12:45] "[31m[1mGET /dashboard/overview HTTP/1.1[0m" 401 -
+2025-03-08 21:13:59,008 - INFO - Flask server starting...
+2025-03-08 21:13:59,012 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.74:5000
+2025-03-08 21:13:59,012 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 21:13:59,238 - INFO - 172.31.128.74 - - [08/Mar/2025 21:13:59] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-08 21:13:59,241 - INFO - 172.31.128.74 - - [08/Mar/2025 21:13:59] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-08 21:13:59,306 - INFO - Unauthorized access attempt to /dashboard/overview: Missing Authorization Header
+2025-03-08 21:13:59,306 - INFO - 172.31.128.74 - - [08/Mar/2025 21:13:59] "[31m[1mGET /dashboard/overview HTTP/1.1[0m" 401 -
+2025-03-08 21:13:59,428 - INFO - Unauthorized access attempt to /dashboard/overview: Missing Authorization Header
+2025-03-08 21:13:59,429 - INFO - 172.31.128.74 - - [08/Mar/2025 21:13:59] "[31m[1mGET /dashboard/overview HTTP/1.1[0m" 401 -
+2025-03-08 21:13:59,566 - INFO - 172.31.128.74 - - [08/Mar/2025 21:13:59] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-08 21:13:59,572 - INFO - Unauthorized access attempt to /dashboard/overview: Missing Authorization Header
+2025-03-08 21:13:59,572 - INFO - 172.31.128.74 - - [08/Mar/2025 21:13:59] "[31m[1mGET /dashboard/overview HTTP/1.1[0m" 401 -
+2025-03-08 21:13:59,586 - INFO - Unauthorized access attempt to /dashboard/overview: Missing Authorization Header
+2025-03-08 21:13:59,587 - INFO - 172.31.128.74 - - [08/Mar/2025 21:13:59] "[31m[1mGET /dashboard/overview HTTP/1.1[0m" 401 -
+2025-03-08 21:14:19,919 - INFO - Unauthorized access attempt to /dashboard/overview: Missing Authorization Header
+2025-03-08 21:14:19,920 - INFO - 172.31.128.74 - - [08/Mar/2025 21:14:19] "[31m[1mGET /dashboard/overview HTTP/1.1[0m" 401 -
+2025-03-08 21:14:20,081 - INFO - 172.31.128.74 - - [08/Mar/2025 21:14:20] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-08 21:14:20,088 - INFO - Unauthorized access attempt to /dashboard/overview: Missing Authorization Header
+2025-03-08 21:14:20,088 - INFO - 172.31.128.74 - - [08/Mar/2025 21:14:20] "[31m[1mGET /dashboard/overview HTTP/1.1[0m" 401 -

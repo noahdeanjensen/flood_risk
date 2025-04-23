@@ -1,0 +1,62 @@
+1. Introduction
+
+As part of the capstone project conclusion, this document consolidates all final deliverables to ensure continuity for the next team advancing the Stormwater Infrastructure Assessment Model (SIAM). Below are the critical components for handover, including access details, documentation, and technical resources.
+2. Deliverables Checklist
+Item	Description	Status
+1. Project Manual	Comprehensive guide covering methodologies, workflows, and system maintenance.	Complete
+2. Final Presentation	Slide deck summarizing objectives, outcomes, and future recommendations.	Complete
+3. Online Database Access	Credentials and instructions for cloud-hosted data storage.	Complete
+4. Website Password	Login details for the project’s front-end interface.	Complete
+5. Admin Passcode	Secure access code for administrative system controls.	Complete
+6. GitHub Repository	Link to codebase, including AI integration scripts and documentation.	Complete
+3. Access Details
+
+(Replace placeholder text with actual credentials. Share sensitive information via secure channels.)
+
+    Database Access:
+
+        URL: [Insert Database URL]
+
+        Username: [Insert Username]
+
+        Password: [Insert Password]
+
+    Website Login:
+
+        URL: [Insert Website URL]
+
+        Username: [Insert Username]
+
+        Password: [Insert Password]
+
+    Admin Passcode:
+
+        [Insert Passcode]
+
+    GitHub Repository:
+
+        Link: [Insert GitHub URL]
+
+        Branch: main (latest stable version)
+
+4. Documentation & Support
+
+    Project Manual: Located in the GitHub repository under /docs/project_manual.pdf.
+
+    Technical Guides: Refer to the repository’s README.md for setup, dependencies, and troubleshooting.
+
+    Contact Support: For urgent queries, reach out to [Your Team Contact Email] or [Project Supervisor Name].
+
+5. Next Steps
+
+    Handover Meeting: Schedule a session with the incoming team to walk through deliverables (optional).
+
+    Repository Permissions: Ensure the next team has “write” access to the GitHub repository.
+
+    Password Rotation: Advise the new team to update all credentials for security.
+
+6. Closing Remarks
+
+We appreciate the opportunity to contribute to the SIAM project and are confident these materials will enable seamless progress. Thank you for your guidance and collaboration throughout this capstone experience.
+
+Sincerely,

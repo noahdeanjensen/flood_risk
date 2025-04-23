@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="900" height="700" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <!-- Gradients -->
+        <linearGradient id="headerGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#4e73df;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#224abe;stop-opacity:1" />
+        </linearGradient>
+        <linearGradient id="componentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#36b9cc;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#258391;stop-opacity:1" />
+        </linearGradient>
+        <linearGradient id="dataGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#1cc88a;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#13855c;stop-opacity:1" />
+        </linearGradient>
+        <linearGradient id="utilsGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#f6c23e;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#dda20a;stop-opacity:1" />
+        </linearGradient>
+        <linearGradient id="viewsGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#e74a3b;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#be2617;stop-opacity:1" />
+        </linearGradient>
+        
+        <!-- Arrow Marker -->
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+        </marker>
+    </defs>
+    
+    <!-- Background -->
+    <rect width="900" height="700" fill="#f8f9fc" />
+    
+    <!-- Title -->
+    <rect x="50" y="30" width="800" height="60" rx="5" ry="5" fill="url(#headerGradient)" />
+    <text x="450" y="70" font-family="Arial" font-size="22" fill="white" text-anchor="middle" font-weight="bold">Stormwater Infrastructure Assessment System Architecture</text>
+    
+    <!-- User Interface Layer -->
+    <rect x="50" y="120" width="800" height="100" rx="5" ry="5" fill="#fff" stroke="#ccc" stroke-width="2" />
+    <text x="450" y="145" font-family="Arial" font-size="18" fill="#333" text-anchor="middle" font-weight="bold">User Interface Layer (Streamlit)</text>
+    
+    <rect x="80" y="160" width="150" height="40" rx="5" ry="5" fill="#f8f9fc" stroke="#ccc" />
+    <text x="155" y="185" font-family="Arial" font-size="14" fill="#333" text-anchor="middle">Navigation</text>
+    
+    <rect x="250" y="160" width="150" height="40" rx="5" ry="5" fill="#f8f9fc" stroke="#ccc" />
+    <text x="325" y="185" font-family="Arial" font-size="14" fill="#333" text-anchor="middle">Forms</text>
+    
+    <rect x="420" y="160" width="150" height="40" rx="5" ry="5" fill="#f8f9fc" stroke="#ccc" />
+    <text x="495" y="185" font-family="Arial" font-size="14" fill="#333" text-anchor="middle">Visualizations</text>
+    
+    <rect x="590" y="160" width="150" height="40" rx="5" ry="5" fill="#f8f9fc" stroke="#ccc" />
+    <text x="665" y="185" font-family="Arial" font-size="14" fill="#333" text-anchor="middle">Interactivity</text>
+    
+    <!-- Views Layer -->
+    <rect x="50" y="250" width="800" height="100" rx="5" ry="5" fill="url(#viewsGradient)" stroke="#ccc" stroke-width="2" />
+    <text x="450" y="275" font-family="Arial" font-size="18" fill="white" text-anchor="middle" font-weight="bold">Views Layer (Application Logic)</text>
+    
+    <rect x="80" y="290" width="120" height="40" rx="5" ry="5" fill="#fff" stroke="#ccc" />
+    <text x="140" y="315" font-family="Arial" font-size="14" fill="#333" text-anchor="middle">Dashboard</text>
+    
+    <rect x="220" y="290" width="120" height="40" rx="5" ry="5" fill="#fff" stroke="#ccc" />
+    <text x="280" y="315" font-family="Arial" font-size="14" fill="#333" text-anchor="middle">Projects</text>
+    
+    <rect x="360" y="290" width="120" height="40" rx="5" ry="5" fill="#fff" stroke="#ccc" />
+    <text x="420" y="315" font-family="Arial" font-size="14" fill="#333" text-anchor="middle">Assessment</text>
+    
+    <rect x="500" y="290" width="120" height="40" rx="5" ry="5" fill="#fff" stroke="#ccc" />
+    <text x="560" y="315" font-family="Arial" font-size="14" fill="#333" text-anchor="middle">Admin</text>
+    
+    <rect x="640" y="290" width="120" height="40" rx="5" ry="5" fill="#fff" stroke="#ccc" />
+    <text x="700" y="315" font-family="Arial" font-size="14" fill="#333" text-anchor="middle">Documentation</text>
+    
+    <!-- Components Layer -->
+    <rect x="50" y="380" width="800" height="100" rx="5" ry="5" fill="url(#componentGradient)" stroke="#ccc" stroke-width="2" />
+    <text x="450" y="405" font-family="Arial" font-size="18" fill="white" text-anchor="middle" font-weight="bold">Components Layer (Visualization &amp; UI Elements)</text>
+    
+    <rect x="80" y="420" width="120" height="40" rx="5" ry="5" fill="#fff" stroke="#ccc" />
+    <text x="140" y="445" font-family="Arial" font-size="14" fill="#333" text-anchor="middle">Charts</text>
+    
+    <rect x="220" y="420" width="120" height="40" rx="5" ry="5" fill="#fff" stroke="#ccc" />
+    <text x="280" y="445" font-family="Arial" font-size="14" fill="#333" text-anchor="middle">Maps</text>
+    
+    <rect x="360" y="420" width="120" height="40" rx="5" ry="5" fill="#fff" stroke="#ccc" />
+    <text x="420" y="445" font-family="Arial" font-size="14" fill="#333" text-anchor="middle">Forms</text>
+    
+    <rect x="500" y="420" width="120" height="40" rx="5" ry="5" fill="#fff" stroke="#ccc" />
+    <text x="560" y="445" font-family="Arial" font-size="14" fill="#333" text-anchor="middle">Organization Tree</text>
+    
+    <rect x="640" y="420" width="120" height="40" rx="5" ry="5" fill="#fff" stroke="#ccc" />
+    <text x="700" y="445" font-family="Arial" font-size="14" fill="#333" text-anchor="middle">Sunburst Chart</text>
+    
+    <!-- Utilities Layer -->
+    <rect x="50" y="510" width="800" height="80" rx="5" ry="5" fill="url(#utilsGradient)" stroke="#ccc" stroke-width="2" />
+    <text x="450" y="535" font-family="Arial" font-size="18" fill="white" text-anchor="middle" font-weight="bold">Utilities Layer (Services &amp; Tools)</text>
+    
+    <rect x="100" y="550" width="150" height="30" rx="5" ry="5" fill="#fff" stroke="#ccc" />
+    <text x="175" y="570" font-family="Arial" font-size="14" fill="#333" text-anchor="middle">Authentication</text>
+    
+    <rect x="280" y="550" width="150" height="30" rx="5" ry="5" fill="#fff" stroke="#ccc" />
+    <text x="355" y="570" font-family="Arial" font-size="14" fill="#333" text-anchor="middle">Database Access</text>
+    
+    <rect x="460" y="550" width="150" height="30" rx="5" ry="5" fill="#fff" stroke="#ccc" />
+    <text x="535" y="570" font-family="Arial" font-size="14" fill="#333" text-anchor="middle">Report Generation</text>
+    
+    <rect x="640" y="550" width="150" height="30" rx="5" ry="5" fill="#fff" stroke="#ccc" />
+    <text x="715" y="570" font-family="Arial" font-size="14" fill="#333" text-anchor="middle">Documentation</text>
+    
+    <!-- Database Layer -->
+    <rect x="50" y="620" width="800" height="60" rx="5" ry="5" fill="url(#dataGradient)" stroke="#ccc" stroke-width="2" />
+    <text x="450" y="645" font-family="Arial" font-size="18" fill="white" text-anchor="middle" font-weight="bold">Data Layer (SQLite)</text>
+    
+    <rect x="100" y="655" width="100" height="20" rx="5" ry="5" fill="#fff" stroke="#ccc" />
+    <text x="150" y="670" font-family="Arial" font-size="12" fill="#333" text-anchor="middle">Users</text>
+    
+    <rect x="220" y="655" width="100" height="20" rx="5" ry="5" fill="#fff" stroke="#ccc" />
+    <text x="270" y="670" font-family="Arial" font-size="12" fill="#333" text-anchor="middle">Projects</text>
+    
+    <rect x="340" y="655" width="100" height="20" rx="5" ry="5" fill="#fff" stroke="#ccc" />
+    <text x="390" y="670" font-family="Arial" font-size="12" fill="#333" text-anchor="middle">Members</text>
+    
+    <rect x="460" y="655" width="100" height="20" rx="5" ry="5" fill="#fff" stroke="#ccc" />
+    <text x="510" y="670" font-family="Arial" font-size="12" fill="#333" text-anchor="middle">Assessments</text>
+    
+    <rect x="580" y="655" width="100" height="20" rx="5" ry="5" fill="#fff" stroke="#ccc" />
+    <text x="630" y="670" font-family="Arial" font-size="12" fill="#333" text-anchor="middle">Activity Log</text>
+    
+    <!-- Connecting Lines -->
+    <!-- UI to Views -->
+    <line x1="450" y1="220" x2="450" y2="250" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
+    
+    <!-- Views to Components -->
+    <line x1="450" y1="350" x2="450" y2="380" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
+    
+    <!-- Components to Utilities -->
+    <line x1="450" y1="480" x2="450" y2="510" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
+    
+    <!-- Utilities to Database -->
+    <line x1="450" y1="590" x2="450" y2="620" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
+    
+    <!-- Legend -->
+    <rect x="650" y="100" width="200" height="15" rx="2" ry="2" fill="url(#viewsGradient)" />
+    <text x="860" y="112" font-family="Arial" font-size="12" fill="#333" text-anchor="middle">Views</text>
+    
+    <rect x="650" y="120" width="200" height="15" rx="2" ry="2" fill="url(#componentGradient)" />
+    <text x="860" y="132" font-family="Arial" font-size="12" fill="#333" text-anchor="middle">Components</text>
+    
+    <rect x="650" y="140" width="200" height="15" rx="2" ry="2" fill="url(#utilsGradient)" />
+    <text x="860" y="152" font-family="Arial" font-size="12" fill="#333" text-anchor="middle">Utilities</text>
+    
+    <rect x="650" y="160" width="200" height="15" rx="2" ry="2" fill="url(#dataGradient)" />
+    <text x="860" y="172" font-family="Arial" font-size="12" fill="#333" text-anchor="middle">Data</text>
+</svg>
